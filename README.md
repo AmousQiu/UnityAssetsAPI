@@ -42,4 +42,5 @@
 ## How it works?         
 ![](https://github.com/AmousQiu/UnityAssetsAPI/blob/master/Screenshots/Upload%20Diagram.png)
 
+![](https://github.com/AmousQiu/UnityAssetsAPI/blob/master/Screenshots/Download%20Diagram.png)
 ## How should I use it for other kind of files? 
