@@ -4,7 +4,11 @@
 >  A general Restful API in PHP woks along with MySQL database as a management system to facilitate uploading, downloading and browsing of various game related assets.   
  
 # Web Interface
-![ho,m page screenshot](https://github.com/AmousQiu/UnityAssetsAPI/blob/master/Screenshots/ServerHomePage.PNG)
+![home page screenshot](https://github.com/AmousQiu/UnityAssetsAPI/blob/master/Screenshots/ServerHomePage.PNG)
+
+![home page screenshot](https://github.com/AmousQiu/UnityAssetsAPI/blob/master/Screenshots/ServerHomePage.PNG)
+
+![home page screenshot](https://github.com/AmousQiu/UnityAssetsAPI/blob/master/Screenshots/ServerHomePage.PNG)
 
 ## How to set it up on your server?  
 
