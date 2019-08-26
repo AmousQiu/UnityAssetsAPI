@@ -1,70 +1,90 @@
-/*
- * ----------------------------------------------------------------------------
- * "THE BEER-WARE LICENSE" (Revision 42):
- * <AmousQiu@dal.ca> wrote this file.  As long as you retain this notice you
- * can do whatever you want with this stuff. If we meet some day, and you think
- * this stuff is worth it, you can buy me a beer in return.           -Ziyu Qiu
- * ----------------------------------------------------------------------------
+<?php 
+/* 
+ * ------------------------------------------------------------------------------------------
+                                         _____ _                     _                _    _ 
+      /\                                / ____| |                   | |              | |  (_)
+     /  \   _ __ ___   ___  _   _ ___  | |    | |__   ___   ___ ___ | | _____   _____| | ___ 
+    / /\ \ | '_ ` _ \ / _ \| | | / __| | |    | '_ \ / _ \ / __/ _ \| |/ _ \ \ / / __| |/ / |
+   / ____ \| | | | | | (_) | |_| \__ \ | |____| | | | (_) | (_| (_) | | (_) \ V /\__ \   <| |
+  /_/    \_\_| |_| |_|\___/ \__,_|___/  \_____|_| |_|\___/ \___\___/|_|\___/ \_/ |___/_|\_\_|           
+                                                                                                                                                                          
+ * <AmousQiu@dal.ca> wrote this file. As long as you retain this notice you
+ * can do whatever you want with this stuff. If we meet some day, and you think this stuff is
+ * worth it, you can buy me a beer in return (Personal prefer Garrison Raspberry).
+ *                                                                        @Copyright Ziyu Qiu
+ * ------------------------------------------------------------------------------------------
  */
 
-/*FileName: InsertData.php
- *Function: -Post function 
- *          -Receive the fileNamePost.
- *          -Find if there any duplicate filename already exist in server.
- *          -return an error message if there is duplicate.
- *          -Insert the name into the MySQL database if not.
- */
+/*FILE INTRODUTION PART 
+  * ------------------------------------------------------------------------------------------
+  *FileName: InsertData.php
+  *Function: -Post function
+  *          -Receive the fileNamePost.
+  *          -Find if there any duplicate filename already exist in server.
+  *          -return an error message if there is duplicate.
+  *          -Insert the name into the MySQL database if not.
+  *
+  *Variable: "fileNamePost"
+  *Database Variables: 
+  *          -Database Name: "imageServer"
+  *          -User Name: "root"
+  *          -User Password : null      
+  *          -Table Name: imageTable;
+  *          -Database table information
+  * +-----------+-------------+------+-----+---------+-------+
+  * | Field     | Type        | Null | Key | Default | Extra |
+  * +-----------+-------------+------+-----+---------+-------+
+  * | imageName | varchar(20) | NO   | PRI | NULL    |       |
+  * +-----------+-------------+------+-----+---------+-------+
+  *
+  *----------------------------------------------------------------------------------------------
+  /
 
 
-<?php
 /*
  * This part is for connecting to database 
  * change these settings to your setup
  */
-  $servername=null;
+  $servername = null;
   //change this to your username for phpMyAdmin
-  $username="root";
+  $username = "root";
   //change this to your password for phpMyAdmin
-  $password=null;
+  $password = null;
   //change this to your database name 
-  $dbName="imageServer";
+  $dbName = "imageServer";
 
   //"fileNamePost" is the variable name that you give in Unity.
-  $FileName=$_POST["fileNamePost"];//the uploading file's name
+  $FileName = $_POST["fileNamePost"]; //the uploading file's name
 
 
   //Connection to phpMyAdmin
-  $conn=new mysqli($servername,$username,$password,$dbName);
-  if(!$conn){
-	  die("Connection failed!".mysql_connect_error());
+  //! Don't echo the success message, you'll make your C# confused. 
+  $conn = new mysqli($servername, $username, $password, $dbName);
+  if (!$conn) {
+    die("Connection failed!" . mysql_connect_error());
   }
 
- /* Check if there is already something has the same name in the server 
+  /* Check if there is already something has the same name in the server 
   * if So , send an error message and make user rename it.
   * if there is nothing exist, add this file to databse
   */
 
   //change 'imageTable' and 'imageName' according to your database
-  $sql="select * from imageTable where imageName='".$FileName."'";
- 
-  $rs = mysqli_query($conn,$sql);
+  $sql = "select * from imageTable where imageName='" . $FileName . "'";
 
-  $recordCount=mysqli_num_rows($rs);
+  $rs = mysqli_query($conn, $sql);
+  $recordCount = mysqli_num_rows($rs);
 
-  if($recordCount>0){
-	  mysqli_close($conn);
-	  die("exist");
-  }else{ 
-      $sql="INSERT INTO imageTable (imageName) VALUES ('".$FileName."')";
-
-      $result=mysqli_query($conn,$sql);
-
-      if(!$result){
-	  echo"error";
-      } 
-      else{
-	  echo "success";
-      }
+  if ($recordCount > 0) {
+    mysqli_close($conn);
+    die("exist");
+  } else {
+    $sql = "INSERT INTO imageTable (imageName) VALUES ('" . $FileName . "')";
+    $result = mysqli_query($conn, $sql);
+    if (!$result) {
+      echo "error";
+    } else {
+      echo "success";
+    }
   }
-?>
-
+  ?>
