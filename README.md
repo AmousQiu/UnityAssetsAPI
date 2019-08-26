@@ -17,16 +17,16 @@
 ![home page screenshot](https://github.com/AmousQiu/UnityAssetsAPI/blob/master/Screenshots/MusicServerHomepage.PNG)
 
 ## How to set it up on your server?  
-- ### You would need to set up these stuff on your server
+- #### You would need to set up these stuff on your server
       - Apache
       - php
       - phpMyadmin
       - mysql    
 <br>
    
-- ### Now download the file folder
+- #### Now download the file folder
  
-- ### Upload the whole folder to your target server 
+- #### Upload the whole folder to your target server 
  
   
   - Linux   
