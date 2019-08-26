@@ -6,9 +6,9 @@
 # Web Interface
 ![home page screenshot](https://github.com/AmousQiu/UnityAssetsAPI/blob/master/Screenshots/ServerHomePage.PNG)
 
-![home page screenshot](https://github.com/AmousQiu/UnityAssetsAPI/blob/master/Screenshots/ServerHomePage.PNG)
+![home page screenshot](https://github.com/AmousQiu/UnityAssetsAPI/blob/master/Screenshots/PhotoServerHomepage.PNG)
 
-![home page screenshot](https://github.com/AmousQiu/UnityAssetsAPI/blob/master/Screenshots/ServerHomePage.PNG)
+![home page screenshot](https://github.com/AmousQiu/UnityAssetsAPI/blob/master/Screenshots/MusicServerHomepage.PNG)
 
 ## How to set it up on your server?  
 
