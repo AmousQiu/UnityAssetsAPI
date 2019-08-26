@@ -72,13 +72,17 @@
   //change 'imageTable' and 'imageName' according to your database
   $sql = "select * from imageTable where imageName='" . $FileName . "'";
 
+  //rs would return the result from the select query
   $rs = mysqli_query($conn, $sql);
+  //count the number of the results
   $recordCount = mysqli_num_rows($rs);
-
+  
+  // if record's number is larger than 0, means there is duplicate file
   if ($recordCount > 0) {
     mysqli_close($conn);
     die("exist");
   } else {
+    //change 'imageTable' and 'imageName' according to your database
     $sql = "INSERT INTO imageTable (imageName) VALUES ('" . $FileName . "')";
     $result = mysqli_query($conn, $sql);
     if (!$result) {
