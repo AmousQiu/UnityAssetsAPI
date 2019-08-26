@@ -44,6 +44,6 @@
 
 ![](https://github.com/AmousQiu/UnityAssetsAPI/blob/master/Screenshots/Download%20Diagram.png)
 
-[ :tiger2: Detailed comments in imageServer code](http://https://github.com/AmousQiu/UnityAssetsAPI/tree/master/imageServer)
+[ :tiger2: Detailed comments in imageServer code](https://github.com/AmousQiu/UnityAssetsAPI/tree/master/imageServer)
 
 ## How should I use it for other kind of files? 
