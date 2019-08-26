@@ -24,9 +24,9 @@
       - mysql    
 <br>
    
-- ###Now download the file folder
+- ### Now download the file folder
  
-- ###Upload the whole folder to your target server 
+- ### Upload the whole folder to your target server 
  
   
   - Linux   
@@ -40,6 +40,6 @@
         But if you insist, just copy and paste this folder to your target place
    
 ## How it works?         
-
+![](https://github.com/AmousQiu/UnityAssetsAPI/blob/master/Screenshots/Upload%20Diagram.png)
 
 ## How should I use it for other kind of files? 
