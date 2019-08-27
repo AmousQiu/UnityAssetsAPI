@@ -37,7 +37,7 @@
   }
   fclose($fh);
 
-  $file_path="uploadImages/";
+  $file_path="files/";
 
   if(is_dir($file_path)!=TRUE){
      mkdir($file_path,0664);

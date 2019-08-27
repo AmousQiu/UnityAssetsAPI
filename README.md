@@ -95,6 +95,22 @@
   ` echo "FileName:".$row ['Name'].";";  `
 
 ---  
+<br>
+<br>
+
+- ### UnityUpload.php
+---
+//The only thing you need to do is changing ".png" to the file type you want to upload    
+`$myFile = $file_path.$_REQUEST['Name'].".png";`  
+   
+---  
+
+
+># Now all the server part are all done!
+># Time to learn how to apply them in Unity
+  - ## Audio Recorder Tutorial
+  - ## Doodle noodle Tutorial
+
 
 
 

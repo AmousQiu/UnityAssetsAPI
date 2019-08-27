@@ -38,7 +38,7 @@
   $servername=null;
   $username="root";
   $password=null;
-  $dbName="imageServer";
+  $dbName="Server";
 
   
   $conn=new mysqli($servername,$username,$password,$dbName);
@@ -51,13 +51,13 @@
   }
 
   //shwo all the tuples from that database
-  $sql="SELECT * FROM `imageTable`";
+  $sql="SELECT * FROM 'Table'";
   $result=mysqli_query($conn,$sql);
   if(mysqli_num_rows($result)>0){
     while($row=mysqli_fetch_assoc($result)){
       //In this way, the output would be like FileName:Balabala; 
       //We would use the ";" to seperate each tuple later.
-		  echo "FileName:".$row ['imageName'].";";
+		  echo "FileName:".$row ['Name'].";";
 	  }
   }
 ?>
