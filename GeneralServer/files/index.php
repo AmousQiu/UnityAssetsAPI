@@ -1,4 +1,4 @@
-<!--
+<?php
 /* 
  * ------------------------------------------------------------------------------------------
  *                                        _____ _                     _                _    _ 
@@ -17,36 +17,61 @@
 
 /*FILE INTRODUTION PART 
   * ------------------------------------------------------------------------------------------
-  *FileName: index.html
-  *Function: Home Page of this server
+  *FileName: index.php
+  *Function: -show all the photos existing in the folder.
+  *!!!!!!Needs rewrite.
 */
--->
+?>
 
-<!DOCTYPE html>
-<html>
-
+<!DOCTYPE HTML>
 <head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-                integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-                crossorigin="anonymous">
-        <title>Server Home Page</title>
+<title>Artworks</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+<body bgcolor="#afafaf">
+<h1 align="center"> Some photos </h1>
 
-<body>
-        <h1 align="center">
-                Welcome to the server!
-        </h1>
-        <ul class="list-group list-group-flush">
-                <li class="list-group-item" align="center"><a href="http://18.191.23.16/jsonServer/files">Json
-                                Server</a></li>
-                <br>
-                <li class="list-group-item" align="center"><a href="http://18.191.23.16/musicServer/files">Music
-                                Server</a></li>
-                <br>
-                <li class="list-group-item" align="center"><a href="http://18.191.23.16/imageServer/uploadImages">Image
-                                Server</a></li>
-                <br>
-        </ul>
+	<?php
+	$folder = "./";
+	$files = array();
+	$handle = opendir($folder);
+
+	while (false !== ($file = readdir($handle))) {
+	    if ($file != '.' && $file != '..') {
+          $hz = strstr($file, ".");
+		        if ($hz == ".png" ){
+		            $files[] = $file;
+		        }
+      }
+	}
+
+	 
+	if ($files) {
+			echo '<div class="row"> ';
+			$i=0;
+			foreach ($files as $k => $v) {
+		    if($i==0){   
+			    echo'<div class="col">';
+		    }
+		    echo  '<img width=300 height=500 src="'.$v.'">';
+		    if($i==4){
+		      echo'</div>';
+		    }
+		    $i=$i+1;
+		    if($i==5){
+			     $i=0;
+		    }
+	    }
+			echo '</div>';
+			echo '</div>';
+	} 
+  ?>
 </body>
-
 </html>
+
+
+ 
+
+
+ 
+

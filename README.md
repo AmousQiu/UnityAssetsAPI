@@ -47,3 +47,22 @@
 [ :tiger2: Detailed comments in imageServer code](https://github.com/AmousQiu/UnityAssetsAPI/tree/master/imageServer)
 
 ## How should I use it for other kind of files? 
+
+### InsertData.php
+```
+  /*
+   * This part is for connecting to database 
+   * change these settings to your setup
+   */
+```  
+  //change this to your servername for phpMyadmin  
+  `$servername = null;`  
+
+  //change this to your username for phpMyAdmin  
+  `$username = "root";`  
+
+  //change this to your password for phpMyAdmin  
+  `$password = null;`  
+
+  //change this to your database name   
+  `$dbName = "Server";` 
