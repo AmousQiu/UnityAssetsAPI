@@ -50,24 +50,34 @@
 
 - ### InsertData.php
 --- 
+  ```php
   //change this to your servername for phpMyadmin  
-  `$servername = null;`  
-
+   $servername = null;  
+  ```
+  ```php
   //change this to your username for phpMyAdmin  
-  `$username = "root";`  
-
+  $username = "root";
+  ```
+  
+  ```php
   //change this to your password for phpMyAdmin  
-  `$password = null;`  
+  $password = null;
+  ```
 
+  ```php
   //change this to your database name   
-  `$dbName = "Server";` 
+  $dbName = "Server";
+  ``` 
 
+  ```php
   //change 'Table' and 'Name' according to your database  
-  `$sql = "select * from Table where Name='" . $FileName . "'";`
+  $sql = "select * from Table where Name='" . $FileName . "'";
+  ```
 
+```php
   //change 'Table' and 'Name' according to your database  
-  `$sql = "INSERT INTO Table (Name) VALUES ('" . $FileName . "')";`   
-
+  $sql = "INSERT INTO Table (Name) VALUES ('" . $FileName . "')";  
+```
 ---  
   
 <br>
@@ -77,16 +87,23 @@
 ---
  
   //change this to your serverName for phpMyadmin  
-  `$servername = null;`  
+  ```php 
+  $servername = null;
+  ```  
 
   //change this to your username for phpMyAdmin  
-  `$username = "root";`  
+  ```php
+  $username = "root";
+  ```  
+  ```php
+  //change this to your password for phpMyAdmin   
+  $password = null;
+  ```   
 
-  //change this to your password for phpMyAdmin  
-  `$password = null;`  
-
+  ```php
   //change this to your database name   
-  `$dbName = "Server";` 
+  $dbName = "Server";
+  ``` 
 
   //change 'Table' according to your database  
   `  $sql="SELECT * FROM 'Table'"; `
@@ -101,7 +118,9 @@
 - ### UnityUpload.php
 ---
 //The only thing you need to do is changing ".png" to the file type you want to upload    
-`$myFile = $file_path.$_REQUEST['Name'].".png";`  
+```php 
+$myFile = $file_path.$_REQUEST['Name'].".png";
+```  
    
 ---  
 
