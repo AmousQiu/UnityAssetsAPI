@@ -129,10 +129,96 @@ $myFile = $file_path.$_REQUEST['Name'].".png";
 ---  
 
 
-># Now all the server part are all done!
-># Time to learn how to apply them in Unity
-  - ## Audio Recorder Tutorial
-  - ## Doodle noodle Tutorial
+>### Now all the server part are all done!
+>### Time to learn how to apply them in Unity
+
+
+
+>- # Download Part
+```csharp
+    string GetDataValue(string data, string index)
+    {
+        Debug.Log("data: " + data + "index" + index);
+        string value = data.Substring(data.IndexOf(index) + index.Length);
+        if (value.Contains("|"))
+        {
+            value = value.Remove(value.IndexOf("|"));
+        }
+        return value;
+    }
+```
+
+```csharp
+   WWWForm musicForm = new WWWForm();
+   //change this to your url
+   WWW wwwMusic = new WWW("Your itemsData.php url");
+   yield return wwwMusic;
+   string allString = (wwwMusic.text);
+   Debug.Log(allString);
+   //seperate each tuples
+   items = allString.Split(';');
+   string filename;
+   for (int i = 0; i < items.Length - 1; i++)
+   {
+      filename = GetDataValue(items[i], "FileName:");
+   }
+```
+
+>After these part , you would get an array of the filenames, find a specific way for the files you need to load
+
+<br>
+<br>
+
+>- #  Upload Part  
+  - ### Insert into database
+```csharp
+    public static string insertIntoDB(string filename, byte[] bytes)
+    {
+        string result="";
+        WWWForm form = new WWWForm();
+        form.AddField("fileNamePost", filename);
+        //change this to your url
+        string insertURL = "Your insertData.php url";
+        WWW www = new WWW(insertURL, form);
+        if (www.error != null)
+        {
+            Debug.Log(www.error);
+        }
+
+        else
+        {
+            while (!www.isDone)
+            {
+            }
+            Debug.Log("insertNew wav file: " + www.text);
+            if (www.text != "exist")
+            {
+                result= "success";
+                upload(bytes, filename);
+            }
+            else
+            {
+                result="fail";
+            }
+        }
+        return result;
+    }
+```
+- ### Upload into server
+```csharp
+    public static void upload(byte[] bytes, string filename)
+    {
+        //change this to your url
+        string url = "Your UnityUpload.php url";
+        WWWForm form = new WWWForm();
+        form.AddField("Name", filename);
+        form.AddBinaryData("post", bytes);
+        WWW www = new WWW(url, form);
+    }
+```
+
+# THE END.
+
 
 
 
