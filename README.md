@@ -75,8 +75,8 @@
   ```
 
 ```php
-  //change 'Table' and 'Name' according to your database  
-  $sql = "INSERT INTO Table (Name) VALUES ('" . $FileName . "')";  
+//change 'Table' and 'Name' according to your database  
+$sql = "INSERT INTO Table (Name) VALUES ('" . $FileName . "')";  
 ```
 ---  
   
@@ -85,16 +85,16 @@
 
 - ### itemsData.php
 ---
- 
-  //change this to your serverName for phpMyadmin  
-  ```php 
+  ```php
+  //change this to your serverName for phpMyadmin   
   $servername = null;
   ```  
 
-  //change this to your username for phpMyAdmin  
   ```php
+  //change this to your username for phpMyAdmin  
   $username = "root";
   ```  
+
   ```php
   //change this to your password for phpMyAdmin   
   $password = null;
@@ -104,12 +104,16 @@
   //change this to your database name   
   $dbName = "Server";
   ``` 
-
+  
+  ```php
   //change 'Table' according to your database  
-  `  $sql="SELECT * FROM 'Table'"; `
+  $sql="SELECT * FROM 'Table'"; 
+  ```
 
+  ```php
   //change 'Name' according to your database  
-  ` echo "FileName:".$row ['Name'].";";  `
+  echo "FileName:".$row ['Name'].";"; 
+  ```
 
 ---  
 <br>
@@ -117,8 +121,8 @@
 
 - ### UnityUpload.php
 ---
-//The only thing you need to do is changing ".png" to the file type you want to upload    
-```php 
+```php
+//The only thing you need to do is changing ".png" to the file type you want to upload     
 $myFile = $file_path.$_REQUEST['Name'].".png";
 ```  
    
