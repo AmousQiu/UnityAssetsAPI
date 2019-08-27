@@ -71,8 +71,8 @@
   * if there is nothing exist, add this file to databse
   */
 
-  //change 'imageTable' and 'imageName' according to your database
-  $sql = "select * from imageTable where imageName='" . $FileName . "'";
+  //change 'Table' and 'Name' according to your database
+  $sql = "select * from Table where Name='" . $FileName . "'";
 
   //rs would return the result from the select query
   $rs = mysqli_query($conn, $sql);
@@ -84,8 +84,9 @@
     mysqli_close($conn);
     die("exist");
   } else {
-    //change 'imageTable' and 'imageName' according to your database
-    $sql = "INSERT INTO imageTable (imageName) VALUES ('" . $FileName . "')";
+    //change 'Table' and 'Name' according to your database
+    $sql = "INSERT INTO Table (Name) VALUES ('" . $FileName . "')";
+    
     $result = mysqli_query($conn, $sql);
     if (!$result) {
       echo "error";

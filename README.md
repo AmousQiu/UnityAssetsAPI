@@ -48,13 +48,8 @@
 
 ## How should I use it for other kind of files? 
 
-### InsertData.php
-```
-  /*
-   * This part is for connecting to database 
-   * change these settings to your setup
-   */
-```  
+- ### InsertData.php
+--- 
   //change this to your servername for phpMyadmin  
   `$servername = null;`  
 
@@ -66,3 +61,40 @@
 
   //change this to your database name   
   `$dbName = "Server";` 
+
+  //change 'Table' and 'Name' according to your database  
+  `$sql = "select * from Table where Name='" . $FileName . "'";`
+
+  //change 'Table' and 'Name' according to your database  
+  `$sql = "INSERT INTO Table (Name) VALUES ('" . $FileName . "')";`   
+
+---  
+  
+<br>
+<br>    
+
+- ### itemsData.php
+---
+ 
+  //change this to your serverName for phpMyadmin  
+  `$servername = null;`  
+
+  //change this to your username for phpMyAdmin  
+  `$username = "root";`  
+
+  //change this to your password for phpMyAdmin  
+  `$password = null;`  
+
+  //change this to your database name   
+  `$dbName = "Server";` 
+
+  //change 'Table' according to your database  
+  `  $sql="SELECT * FROM 'Table'"; `
+
+  //change 'Name' according to your database  
+  ` echo "FileName:".$row ['Name'].";";  `
+
+---  
+
+
+
