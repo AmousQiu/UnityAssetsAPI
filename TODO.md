@@ -1,2 +1,4 @@
-- [ ] Rewrite the html and php mixed files
-- [ ] 
+- [ ] Rewrite imageServer/uploadImages/index.php
+- [ ] Rewrite jsonServer/files/index.php
+- [ ] Rewrite musicServer/files/index.php
+- [ ] Rewrite index.html

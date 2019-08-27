@@ -17,12 +17,9 @@
 
 /*FILE INTRODUTION PART 
   * ------------------------------------------------------------------------------------------
-  *FileName: InsertData.php
-  *Function: -Post function
-  *          -Receive the fileNamePost.
-  *          -Find if there any duplicate filename already exist in server.
-  *          -return an error message if there is duplicate.
-  *          -Insert the name into the MySQL database if not.
+  *FileName: index.php
+  *Function: -show all the photos existing in the folder.
+  *!!!!!!Needs rewrite.
 */
 ?>
 

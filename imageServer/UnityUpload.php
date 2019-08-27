@@ -1,5 +1,4 @@
 <?php
-//TODO variable part
 /* 
  * ------------------------------------------------------------------------------------------
                                          _____ _                     _                _    _ 
@@ -23,8 +22,8 @@
   *          -Receive its name as well
   *          -Save it to a specific folder on the server
   *          -if  the specific folder doesn't exist, create one
-  *Variable: "post"
-  *
+  *Variable: -"post" - file's byte array
+  *          -"Name" - file's name
   *----------------------------------------------------------------------------------------------
   */ 
 
