@@ -1,18 +1,17 @@
 # UnityAssetsAPI
-----------
 
->  A general Restful API in PHP woks along with MySQL database as a management system to facilitate uploading, downloading and browsing of various game related assets.   
+  A general Restful API in PHP woks along with MySQL database as a management system to facilitate uploading, downloading and browsing of various game related assets.   
  
-# Web Interface
-- Server Home Page    
+## Web Interface
+### Server Home Page    
 
 ![home page screenshot](https://github.com/AmousQiu/UnityAssetsAPI/blob/master/Screenshots/ServerHomePage.PNG)
 
-- Photo Server Home Page  
+### Photo Server Home Page  
 
 ![home page screenshot](https://github.com/AmousQiu/UnityAssetsAPI/blob/master/Screenshots/PhotoServerHomepage.PNG)
 
-- Music Server Home Page    
+### Music Server Home Page    
 
 ![home page screenshot](https://github.com/AmousQiu/UnityAssetsAPI/blob/master/Screenshots/MusicServerHomepage.PNG)
 
